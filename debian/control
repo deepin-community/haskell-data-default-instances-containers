@@ -1,0 +1,55 @@
+Source: haskell-data-default-instances-containers
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts (>= 0.13.8),
+ libghc-data-default-class-dev,
+ libghc-data-default-class-prof,
+Build-Depends-Indep: ghc-doc, libghc-data-default-class-doc
+Standards-Version: 4.5.0
+Homepage: https://hackage.haskell.org/package/data-default-instances-containers
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-data-default-instances-containers
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-data-default-instances-containers]
+X-Description: default instances for types in containers
+ The included module defines Default instances for the types Set, Map,
+ IntMap, IntSet, Seq, and Tree.
+
+Package: libghc-data-default-instances-containers-dev
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-data-default-instances-containers-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-data-default-instances-containers-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
